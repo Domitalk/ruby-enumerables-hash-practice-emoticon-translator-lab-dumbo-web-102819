@@ -6,12 +6,10 @@ def load_library(file)
   new_hash = Hash.new
   new_hash = {
     "get_meaning" => {
-      #Japanese emoticons => "meaning",
-      #Japanese emotoicons => "meaning"
+      #japanese - > meaning
     },
     "get_emoticon" => {
-      #English emoticons => "meaning",
-      #English emoticons => "meaning"
+      #english - > japanese
     }
   }
   simple_view.each do |key, value|
@@ -28,6 +26,7 @@ end
 
 def get_japanese_emoticon(file, emoticon)
   full_file = load_library(file)
+  full_file[get_emoticon] 
 end
 
 def get_english_meaning
